@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #FAFAFD;
+    color: #0F172A;
+  }
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', monospace, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animated Profile Picture Keyframes */
+@keyframes avatarPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes avatarScanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes avatarRadar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes avatarFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes avatarGlowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.9));
+  }
+}
+
+@keyframes avatarEyeBlink {
+  0%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes avatarEnergyOrb {
+  0% {
+    transform: rotate(0deg) translateX(18px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(18px) rotate(-360deg);
+  }
+}
+
+@keyframes avatarRGBBorder {
+  0% {
+    stroke: #3b82f6;
+  }
+  33% {
+    stroke: #eab308;
+  }
+  66% {
+    stroke: #10b981;
+  }
+  100% {
+    stroke: #3b82f6;
+  }
+}
+
+.animate-avatar-pulse {
+  animation: avatarPulse 3s ease-in-out infinite;
+}
+
+.animate-avatar-scanline {
+  animation: avatarScanline 2.4s linear infinite;
+}
+
+.animate-avatar-radar {
+  animation: avatarRadar 4s linear infinite;
+  transform-origin: center;
+}
+
+.animate-avatar-float {
+  animation: avatarFloat 3.5s ease-in-out infinite;
+}
+
+.animate-avatar-glow {
+  animation: avatarGlowPulse 2.5s ease-in-out infinite;
+}
+
+.animate-avatar-blink {
+  animation: avatarEyeBlink 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.animate-avatar-orbit {
+  animation: avatarEnergyOrb 5s linear infinite;
+  transform-origin: center;
+}
+
+.animate-avatar-rgb {
+  animation: avatarRGBBorder 4s linear infinite;
+}
+

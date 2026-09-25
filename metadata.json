@@ -1,0 +1,6 @@
+{
+  "name": "Champ Collectors",
+  "description": "Cross-platform gaming friends hub for PlayStation & Xbox: track personal progress, compare friend trophies, discover hot deals, and explore games of the month.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
