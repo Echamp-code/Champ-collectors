@@ -142,15 +142,3 @@ export interface GameOfTheMonth {
   description: string;
 }
 
-export interface FeatureAdvice {
-  id: string;
-  title: string;
-  category: 'social' | 'hunting' | 'deals' | 'analytics' | 'hardware';
-  shortSummary: string;
-  detailedRationale: string;
-  implementationEase: 'Easy' | 'Medium' | 'Advanced';
-  userValue: 'Moderate' | 'Medium' | 'High' | 'Very High' | 'Essential';
-  upvotes: number;
-  tags: string[];
-  interactiveDemoType?: 'ai_roadmap' | 'bounty_preview' | 'coop_finder' | 'price_radar';
-}

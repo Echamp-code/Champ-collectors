@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Trophy, CheckCircle2, RefreshCw, Gamepad2, Shield, Heart } from 'lucide-react';
-import { initialUserProfile, sampleGames, sampleFriends, liveFriendFeed, sampleDeals, sampleGamesOfTheMonth, featureAdvisories } from './data/mockData';
+import { initialUserProfile, sampleGames, sampleFriends, liveFriendFeed, sampleDeals, sampleGamesOfTheMonth } from './data/mockData';
 import { UserProfile, Game, FriendActivity } from './types';
 import { Header } from './components/Header';
 import { PersonalProgressView } from './components/PersonalProgressView';
 import { FriendsProgressView } from './components/FriendsProgressView';
 import { DealsAndMonthlyView } from './components/DealsAndMonthlyView';
-import { FeatureAdvisorView } from './components/FeatureAdvisorView';
 import { AccountConnectModal } from './components/AccountConnectModal';
 import { AvatarCustomizerModal } from './components/AvatarCustomizerModal';
 import { resolveAvatarArchetype } from './components/AnimatedAvatar';
@@ -16,7 +15,7 @@ export default function App() {
   const [games, setGames] = useState<Game[]>(sampleGames);
   const [friends, setFriends] = useState(sampleFriends);
   const [activities, setActivities] = useState<FriendActivity[]>(liveFriendFeed);
-  const [activeTab, setActiveTab] = useState<'my_progress' | 'friends' | 'deals' | 'advisory'>('my_progress');
+  const [activeTab, setActiveTab] = useState<'my_progress' | 'friends' | 'deals'>('my_progress');
   const [isConnectModalOpen, setIsConnectModalOpen] = useState(false);
   const [isAvatarModalOpen, setIsAvatarModalOpen] = useState(false);
   const [isSyncing, setIsSyncing] = useState(false);
@@ -187,10 +186,6 @@ export default function App() {
             gamesOfTheMonth={sampleGamesOfTheMonth}
           />
         )}
-
-        {activeTab === 'advisory' && (
-          <FeatureAdvisorView advisories={featureAdvisories} />
-        )}
       </main>
 
       {/* Footer */}
@@ -207,7 +202,7 @@ export default function App() {
           <div className="flex items-center gap-4 text-[11px] font-medium">
             <button
               onClick={() => setIsAvatarModalOpen(true)}
-              className="text-amber-600 font-semibold hover:underline flex items-center gap-1"
+              className="text-amber-600 font-semibold hover:underline flex items-center gap-1 cursor-pointer"
             >
               ★ Animated Avatar Studio
             </button>
@@ -220,13 +215,6 @@ export default function App() {
               <span className="w-2 h-2 rounded-full bg-emerald-600" />
               Xbox Live Connected
             </span>
-            <span className="text-slate-300">|</span>
-            <button
-              onClick={() => setActiveTab('advisory')}
-              className="hover:text-purple-600 transition-colors"
-            >
-              Suggested Features Roadmap
-            </button>
           </div>
         </div>
       </footer>

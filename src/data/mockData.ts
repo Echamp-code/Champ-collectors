@@ -1,4 +1,4 @@
-import { UserProfile, Game, Friend, FriendActivity, GameDeal, GameOfTheMonth, FeatureAdvice } from '../types';
+import { UserProfile, Game, Friend, FriendActivity, GameDeal, GameOfTheMonth } from '../types';
 
 export const initialUserProfile: UserProfile = {
   name: 'Alex Vance',
@@ -899,75 +899,3 @@ export const sampleGamesOfTheMonth: GameOfTheMonth[] = [
   },
 ];
 
-export const featureAdvisories: FeatureAdvice[] = [
-  {
-    id: 'feat-1',
-    title: 'AI Trophy Hunter & Optimal Roadmap Engine',
-    category: 'hunting',
-    shortSummary: 'Generates step-by-step trophy roadmaps, flags missable trophies, and calculates the fastest path to 100% completion.',
-    detailedRationale: 'Gamers hate having to replay a 40-hour game because they missed a single collectible in Chapter 3. An integrated Trophy Roadmap scans your remaining locked trophies, alerts you before point-of-no-return chapters, and arranges trophies in chronological playthrough order.',
-    implementationEase: 'Medium',
-    userValue: 'Essential',
-    upvotes: 482,
-    tags: ['AI Assistant', 'Missable Alert', 'Playthrough Optimizer'],
-    interactiveDemoType: 'ai_roadmap',
-  },
-  {
-    id: 'feat-2',
-    title: 'Cross-Console Co-Op & Trophy Boosting Lobby',
-    category: 'social',
-    shortSummary: 'Matchmake with friends or trusted community collectors who need the exact same multiplayer trophies you do.',
-    detailedRationale: 'Multiplayer trophies often die when servers get quiet (e.g. "Win a ranked match with 4 friends"). This feature creates private booster squads with sync timezones, audio party links, and checklist confirmations.',
-    implementationEase: 'Medium',
-    userValue: 'Very High',
-    upvotes: 418,
-    tags: ['Lobby Matchmaker', 'Squad Finder', 'Boosting Hub'],
-    interactiveDemoType: 'coop_finder',
-  },
-  {
-    id: 'feat-3',
-    title: 'Backlog Price Radar & Historical Low Alerts',
-    category: 'deals',
-    shortSummary: 'Syncs your trophy backlog / wishlist and automatically alerts you when PlayStation Store or Xbox discounts hit an all-time low.',
-    detailedRationale: 'Collectors frequently accumulate wishlists across both stores. By calculating "Dollar-per-Trophy Value" and notifying users when a title drops beneath their target budget, Champ Collectors becomes an indispensable daily gaming utility.',
-    implementationEase: 'Easy',
-    userValue: 'Very High',
-    upvotes: 367,
-    tags: ['Price Drop Notification', 'Dollar-per-Hour', 'Deal Tracker'],
-    interactiveDemoType: 'price_radar',
-  },
-  {
-    id: 'feat-4',
-    title: 'Weekly Community Trophy Bounties & Digital Badges',
-    category: 'analytics',
-    shortSummary: 'Weekly cross-platform hunting challenges with customized Champ Collector medals and leaderboard tiers.',
-    detailedRationale: 'Gamification increases daily active engagement. Example bounty: "The Speedrunner" (Earn any Gold or 50G trophy in under 3 hours this weekend). Friends can cheer, compete, and showcase limited-edition badges on their profiles.',
-    implementationEase: 'Medium',
-    userValue: 'High',
-    upvotes: 295,
-    tags: ['Tournaments', 'Community Badges', 'Weekly Quests'],
-    interactiveDemoType: 'bounty_preview',
-  },
-  {
-    id: 'feat-5',
-    title: 'Physical & Digital Collector 3D Shelf Mode',
-    category: 'hardware',
-    shortSummary: 'A virtual interactive 3D collector bookcase showcasing your PlayStation steelbooks, Xbox cases, and platinum statues.',
-    detailedRationale: 'Trophy collectors love showing off their collection aesthetically. Turning digital achievement lists into dynamic, interactive 3D game cases with metallic platinum spine ribbons creates high viral shareability on social media.',
-    implementationEase: 'Advanced',
-    userValue: 'High',
-    upvotes: 219,
-    tags: ['3D Showcase', 'Steelbook Shelf', 'Social Share'],
-  },
-  {
-    id: 'feat-6',
-    title: 'DualSense & Xbox Elite Controller Game Presets',
-    category: 'hardware',
-    shortSummary: 'Save and download game-specific trigger tension, haptic profiles, and back-paddle button maps tailored for trophy speedruns.',
-    detailedRationale: 'Different trophies (like racing challenges or precision shooting) benefit from specific deadzone and paddle setups. Sharing community-tested controller configs makes Champ Collectors the ultimate gamer companion.',
-    implementationEase: 'Advanced',
-    userValue: 'Medium',
-    upvotes: 184,
-    tags: ['Haptics', 'Back-Paddles', 'Pro Controller'],
-  },
-];

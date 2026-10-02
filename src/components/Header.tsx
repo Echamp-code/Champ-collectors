@@ -1,12 +1,12 @@
 import React from 'react';
-import { Trophy, Gamepad2, RefreshCw, Users, Flame, Sparkles, SlidersHorizontal, CheckCircle2, ShieldAlert, Wand2 } from 'lucide-react';
+import { Trophy, Gamepad2, RefreshCw, Users, Flame, SlidersHorizontal, CheckCircle2, ShieldAlert, Wand2 } from 'lucide-react';
 import { UserProfile } from '../types';
 import { AnimatedAvatar } from './AnimatedAvatar';
 
 interface HeaderProps {
   userProfile: UserProfile;
-  activeTab: 'my_progress' | 'friends' | 'deals' | 'advisory';
-  setActiveTab: (tab: 'my_progress' | 'friends' | 'deals' | 'advisory') => void;
+  activeTab: 'my_progress' | 'friends' | 'deals';
+  setActiveTab: (tab: 'my_progress' | 'friends' | 'deals') => void;
   onOpenConnectModal: () => void;
   onOpenAvatarCustomizer?: () => void;
   onSync: () => void;
@@ -85,22 +85,6 @@ export const Header: React.FC<HeaderProps> = ({
               <Flame className={`w-4 h-4 ${activeTab === 'deals' ? 'text-red-500' : 'text-slate-400'}`} />
               <span>Deals & Monthly</span>
               <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            </button>
-
-            <button
-              id="nav-advisory-btn"
-              onClick={() => setActiveTab('advisory')}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all ${
-                activeTab === 'advisory'
-                  ? 'bg-white text-slate-900 shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'
-              }`}
-            >
-              <Sparkles className={`w-4 h-4 ${activeTab === 'advisory' ? 'text-purple-600' : 'text-slate-400'}`} />
-              <span>Feature Advice</span>
-              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-md bg-purple-100 text-purple-700">
-                New
-              </span>
             </button>
           </nav>
 
@@ -207,15 +191,6 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <Flame className="w-3.5 h-3.5 text-red-500" />
             Deals
-          </button>
-          <button
-            onClick={() => setActiveTab('advisory')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap ${
-              activeTab === 'advisory' ? 'bg-blue-50 text-blue-700' : 'text-slate-600'
-            }`}
-          >
-            <Sparkles className="w-3.5 h-3.5 text-purple-600" />
-            Advice
           </button>
         </div>
       </div>
